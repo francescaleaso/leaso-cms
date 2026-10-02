@@ -1,0 +1,103 @@
+.slide-card {
+    cursor: pointer;
+}
+
+.slide1-card.casa {
+    background-image: url('../img/casa2.jpeg');
+}
+
+.slide1-card.cellulare {
+    background-image: url('../img/slide1.jpeg');
+}
+
+.slide1-card.email {
+    background-image: url('../img/premiazione3.jpeg');
+}
+
+.slide1-card.insta {
+    background-image: url('../img/premiazione.jpeg');
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.storia {
+    padding: 50px 150px;
+    margin: 0;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f766d1d;
+    animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  
+.storia-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.storia-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+  
+.storia-image {
+    flex: 1;
+    min-width: 300px;
+    height: 450px;
+    position: relative;
+}
+  
+.storia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    transition: transform 0.8s ease;
+}
+  
+.storia h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+  
+.storia p {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+  
+@media (max-width: 768px) {
+    .storia h1 {
+        text-align: left;
+        margin: 0;
+    }
+
+    .storia p {
+        font-size: 1rem;
+    }
+
+    .storia {
+      padding: 40px;
+    } 
+  
+    .container.storia-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .storia-container {
+      gap: 0;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Anteprima Modifica Immagine</title>
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #0f766e;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        input[type="text"]:focus, input[type="file"]:focus {
+            border-color: #0f766e;
+            outline: none;
+            box-shadow: 0 0 6px rgba(15,118,110,0.4);
+        }
+        button {
+            background: #0f766e;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
+            width: 100%;
+        }
+        button:hover {
+            background: #0c5c55;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>✏️ Modifica Immagine</h2>
+    <form>
+        <input type="hidden" name="id" value="1">
+
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo" value="Tramonto sul mare">
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" value="Paesaggi">
+
+        <label for="immagine">Immagine:</label>
+        <input type="file" id="immagine" name="immagine">
+
+        <button type="submit">💾 Salva modifiche</button>
+    </form>
+</div>
+
+</body>
+</html>

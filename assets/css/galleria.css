@@ -1,0 +1,140 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #fdfdfd;
+color: #333;
+}
+
+.container {
+column-count: 2;
+column-gap: 1rem;
+padding: 1rem;
+animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .filter-buttons button {
+    background-color: #0f766e;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .filter-buttons button:hover {
+    background-color: #0d625b;
+  }
+
+@media (min-width: 600px) {
+.container {
+  column-count: 2;
+}
+}
+
+@media (min-width: 900px) {
+.container {
+  column-count: 3;
+  transition: transform 0.3s ease;
+}
+}
+
+.photo {
+background: white;
+display: inline-block;
+margin: 0 0 1rem;
+width: 100%;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+position: relative;
+}
+
+.photo img {
+width: 100%;
+display: block;
+height: auto;
+transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+transform: scale(1.02);
+}
+
+.photo p {
+padding: 0.5rem;
+margin: 0;
+font-size: 0.9rem;
+background: rgba(0, 0, 0, 0.6);
+color: white;
+position: absolute;
+bottom: 0;
+width: 100%;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.photo:hover p {
+opacity: 1;
+}
+
+.lightbox {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.9);
+align-items: center;
+justify-content: center;
+z-index: 999;
+}
+
+.lightbox img {
+max-width: 90vw;
+max-height: 90vh;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.filter-buttons button {
+  background-color: rgb(244, 248, 247);;
+  color: #0f766e;
+  border: 2px solid #0f766e;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #0f766e;
+  color: white;
+}
+
+.filter-buttons .active-filter {
+  background-color: #0f766e;
+  color: white;
+}
+
+@media screen and (max-width: 460px) {
+  .filter-buttons {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+}
